@@ -72,3 +72,6 @@ heat_years = ['2000','2005','2010','2015','2020']
 heat_map(r"C:\Users\HP\OneDrive - University of Hertfordshire\Assignments\Assignment 2\Climate Change.xls", "China", heat_indicators, heat_years, 'BrBG')
 heat_map(r"C:\Users\HP\OneDrive - University of Hertfordshire\Assignments\Assignment 2\Climate Change.xls", "India", heat_indicators, heat_years, 'turbo')
 
+print("Skew:", stats.skew(df_ftse["Return"]))
+print("Kurtosis", stats.kurtosis(df_ftse["Return"]))
+
