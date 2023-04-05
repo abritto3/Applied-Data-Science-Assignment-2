@@ -48,7 +48,7 @@ def heat_map(filename, Country, heat_i, cma):
 
 #Array containing the index of the required countries
 Countries = [35, 40, 55, 81, 109, 119, 70, 205, 251]
-#Array containing thebindex of required years 1995 -2010
+#Array containing the index of required years 1995 -2010
 Years = [35, 40, 45, 50]
 
 '''Retrieve the data sets into the first set and the transpose of the same in the second set
