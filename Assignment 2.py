@@ -92,7 +92,7 @@ plt.show()
 
 #Array containing the indicator names specifying the indicators needed to plot on the heat maps
 heat_indicators = ["Annual freshwater withdrawals, total (billion cubic meters)", "Population growth (annual %)", "Methane emissions (kt of CO2 equivalent)", "Electricity production from oil sources (% of total)", "Electric power consumption (kWh per capita)"]
-#Plot two heat maps with different country names  and the indicators and map collor scheme as arguments
+#Plot two heat maps with different country names  and the indicators and map colour scheme as arguments
 heat_map("United States", heat_indicators, 'Pastel1')
 heat_map("Spain", heat_indicators, 'Set3')
 
