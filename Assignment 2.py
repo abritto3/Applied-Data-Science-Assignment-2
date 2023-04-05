@@ -9,14 +9,14 @@ import seaborn as sns
 
 def read_file(filename, Countries, Years):
     """The function read_file is defined to read the excel file and will
-    return 2 dataframes, one with countries as coloumns and one with years as
-    coloumns"""
+    return 2 data frames, one with countries as columns and one with years as
+    columns"""
     #Read the data set and delete the first 3 rows of the excel file containing irrelevent data
     x = pd.read_excel(filename, skiprows=3)
     x.drop(columns = ['Country Code', 'Indicator Name', 'Indicator Code'], axis=1, inplace=True)
-    #index the contry name column
+    #index the country name column
     x.set_index(['Country Name'], inplace=True)
-    #Call the data set containg only the relevent Countries and Years
+    #Call the data set containing only the relevant Countries and Years
     y = x.iloc[Countries, Years]
     #Retrieve the transpose of the data set
     z = y.T
@@ -25,11 +25,11 @@ def read_file(filename, Countries, Years):
 
 def heat_map(filename, Country, heat_i, cma):
     """The function heat_map is used to plot a heat map taking in the excel file containing
-    the inital data set, the particular country, indicators, years and the heat map 
-    color scheme as it's arguments'
+    the initial data set, the particular country, indicators, years and the heat map 
+    colour scheme as it's arguments
     """
     a = pd.read_excel(r"C:\Users\HP\OneDrive - University of Hertfordshire\Assignments\Assignment 2\Climate Change.xls", skiprows = 3)
-    #Drop the irrelevent columns from the data set 
+    #Drop the irrelevant columns from the data set 
     a.drop(columns = ['Country Code' , 'Indicator Code'], axis=1, inplace=True)
     #Select the columns containing the specified country
     b = a[a.iloc[:,0] == str(Country)]
