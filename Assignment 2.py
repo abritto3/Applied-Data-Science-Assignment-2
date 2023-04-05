@@ -23,7 +23,7 @@ def read_file(filename, Countries, Years):
     #Return the data set and the transposed data set
     return y, z
 
-def heat_map(filename, Country, heat_i, cma):
+def heat_map(Country, heat_i, cma):
     """The function heat_map is used to plot a heat map taking in the excel file containing
     the initial data set, the particular country, indicators, years and the heat map 
     colour scheme as it's arguments
@@ -93,8 +93,8 @@ plt.show()
 #Array containing the indicator names specifying the indicators needed to plot on the heat maps
 heat_indicators = ["Annual freshwater withdrawals, total (billion cubic meters)", "Population growth (annual %)", "Methane emissions (kt of CO2 equivalent)", "Electricity production from oil sources (% of total)", "Electric power consumption (kWh per capita)"]
 #Plot two heat maps with different country names  and the indicators and map collor scheme as arguments
-heat_map(r"C:\Users\HP\OneDrive - University of Hertfordshire\Assignments\Assignment 2\Climate Change.xls", "United States", heat_indicators, 'Pastel1')
-heat_map(r"C:\Users\HP\OneDrive - University of Hertfordshire\Assignments\Assignment 2\Climate Change.xls", "Spain", heat_indicators, 'Set3')
+heat_map("United States", heat_indicators, 'Pastel1')
+heat_map("Spain", heat_indicators, 'Set3')
 
 #Print the Skew and Kurtosis of a used data set
 print("Skew:", stats.skew(ren_1["1995"]))
