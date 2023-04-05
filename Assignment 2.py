@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import gmean, variation
+from scipy.stats import stats
 from matplotlib import cm
 import seaborn as sns
 
@@ -69,9 +70,8 @@ plt.show()
 heat_indicators = ["Annual freshwater withdrawals, total (billion cubic meters)", "Population growth (annual %)", "Methane emissions (kt of CO2 equivalent)", "Electricity production from oil sources (% of total)", "Electric power consumption (kWh per capita)"]
 heat_years = ['2000','2005','2010','2015','2020']
 
-heat_map(r"C:\Users\HP\OneDrive - University of Hertfordshire\Assignments\Assignment 2\Climate Change.xls", "China", heat_indicators, heat_years, 'BrBG')
-heat_map(r"C:\Users\HP\OneDrive - University of Hertfordshire\Assignments\Assignment 2\Climate Change.xls", "India", heat_indicators, heat_years, 'turbo')
+heat_map(r"C:\Users\HP\OneDrive - University of Hertfordshire\Assignments\Assignment 2\Climate Change.xls", "China", heat_indicators, heat_years, 'prism')
+heat_map(r"C:\Users\HP\OneDrive - University of Hertfordshire\Assignments\Assignment 2\Climate Change.xls", "India", heat_indicators, heat_years, 'prism')
 
-print("Skew:", stats.skew(df_ftse["Return"]))
-print("Kurtosis", stats.kurtosis(df_ftse["Return"]))
-
+print("Skew:", stats.skew(ren_1["1995"]))
+print("Kurtosis", stats.kurtosis(ren_1["1995"]))
